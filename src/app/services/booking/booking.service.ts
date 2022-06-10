@@ -17,4 +17,13 @@ export class BookingService {
     
     return this.http.post(this.BASE_URL+"/addBooking",booking,{headers})
   }
+
+  getBooking(user:any){
+
+    let headers = new HttpHeaders()
+    .set('Authorization', 'Bearer '+localStorage.getItem("token"))
+    .set('Content-Type', 'application/json')
+
+    return this.http.get(this.BASE_URL+"/getBooking?user="+user,{headers});
+  }
 }

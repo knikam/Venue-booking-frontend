@@ -10,13 +10,13 @@
             <a class="nav-link" routerLink="/user-home">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/add-venue" >Add Venue</a>
+            <a class="nav-link" routerLink="/add-venue" *ngIf="isAdmin">Add Venue</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/my-booking" >My booking</a>
+            <a class="nav-link" routerLink="/my-booking" *ngIf="isUser" >My booking</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/view-faculty" >Customer Info</a>
+            <a class="nav-link" routerLink="/customer-info" *ngIf="isUser" >Customer Info</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" (click)="logout()">Logout</a>

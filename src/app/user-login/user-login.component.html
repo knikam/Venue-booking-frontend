@@ -13,7 +13,7 @@
 
                 <div class="form-floating mb-3">
                   <input class="form-control" formControlName="userName" type="email" placeholder="name@example.com" required>
-                  <label for="floatingInput">Email address</label>
+                  <label for="floatingInput">Username</label>
                 </div>
 
                 <div class="form-floating mb-3">
@@ -22,10 +22,10 @@
                 </div>
 
                 <div class="form-floating mb-3">
-                  <select class="form-control py-2" formControlName="gender">
+                  <select class="form-control py-2" formControlName="userType">
                     <option selected disabled hidden>User type</option>
-                    <option value="Male">User</option>
-                    <option value="Female">Dealer</option>
+                    <option value="User">User</option>
+                    <option value="Dealer">Dealer</option>
                   </select>
                  </div>
 
@@ -51,6 +51,11 @@
               <form [formGroup]="registerForm">
 
                 <div class="form-floating mb-3">
+                  <input class="form-control" id="username" type="text" formControlName="loginId" placeholder="name@example.com" required>
+                  <label for="username">Username</label>
+                </div>
+
+                <div class="form-floating mb-3">
                   <input class="form-control" id="name" type="text" formControlName="name" placeholder="name@example.com" required>
                   <label for="username">Name</label>
                 </div>
@@ -61,7 +66,7 @@
                 </div>
 
                 <div class="form-floating mb-3">
-                  <input class="form-control" id="floatingDOB" type="text" formControlName="dateOfBirth" placeholder="YYYY-MM-dd" required>
+                  <input class="form-control" id="floatingDOB" type="Date" formControlName="dateOfBirth" placeholder="YYYY-MM-dd" required>
                   <label for="floatingPassword">Date of Birth</label>
                 </div>
 
@@ -70,6 +75,14 @@
                     <option option value="" selected disabled hidden>Gender</option>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
+                  </select>
+                 </div>
+
+                 <div class="form-floating mb-3">
+                  <select class="form-control py-2" formControlName="userType">
+                    <option selected disabled hidden>User type</option>
+                    <option value="User">User</option>
+                    <option value="Dealer">Dealer</option>
                   </select>
                  </div>
 

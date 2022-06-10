@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ShareServiceService } from '../services/share-service.service';
 
 @Component({
   selector: 'app-my-booking',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyBookingComponent implements OnInit {
 
-  constructor() { }
+  venue:any
+  constructor(private shareService:ShareServiceService) { }
 
   ngOnInit(): void {
+    this.venue = this.shareService.sharingValue;
   }
 
+  addBooking(){
+    
+  }
 }

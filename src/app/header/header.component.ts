@@ -10,16 +10,24 @@ export class HeaderComponent implements OnInit {
 
   @Input()
   isAdmin:boolean=true;
+  isUser:boolean=false;
 
   constructor(private router:Router) { }
 
   ngOnInit(): void {
-    
+    if(localStorage.getItem("role") == null){
+      this.router.navigate(['user-login'])
+    }else{
+      if(localStorage.getItem("role") == "User"){
+        this.isAdmin = false;
+        this.isUser = true;
+      }
+    }
   }
 
   logout(){
+    this.router.navigate(['user-login'])
     localStorage.clear();
-    location.reload();
   }
 
 }

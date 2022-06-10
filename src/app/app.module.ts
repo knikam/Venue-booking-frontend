@@ -11,6 +11,7 @@ import { AddVenueComponent } from './add-venue/add-venue.component';
 import { VenueBookingComponent } from './venue-booking/venue-booking.component';
 import { MyBookingComponent } from './my-booking/my-booking.component';
 import { CustomerInfoComponent } from './customer-info/customer-info.component'
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { CustomerInfoComponent } from './customer-info/customer-info.component'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

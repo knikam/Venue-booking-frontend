@@ -22,7 +22,8 @@
                 </div>
 
                 <div class="form-floating mb-3">
-                  <select class="form-control" formControlName="gender">
+                  <select class="form-control py-2" formControlName="gender">
+                    <option selected disabled hidden>User type</option>
                     <option value="Male">User</option>
                     <option value="Female">Dealer</option>
                   </select>
@@ -66,7 +67,7 @@
 
                 <div class="form-floating mb-3">
                   <select class="form-control py-2" formControlName="gender">
-                    <option selected>Gender</option>
+                    <option option value="" selected disabled hidden>Gender</option>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
                   </select>

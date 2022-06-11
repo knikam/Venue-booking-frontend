@@ -7,6 +7,7 @@
                     <table class="table">
                         <thead>
                           <tr>
+                            <th>Id</th>
                             <th scope="col">Hall</th>
                             <th scope="col">auditorium</th>
                             <th scope="col">hotel</th>
@@ -15,7 +16,14 @@
                           </tr>
                         </thead>
                         <tbody>
-                        
+                          <tr *ngFor="let b of booking">
+                              <td>{{b.id}}</td>
+                              <td><input type="checkbox" *ngIf='b.venueType === "hall"' checked disabled></td>
+                              <td><input type="checkbox" *ngIf='b.venueType === "auditorium"' checked disabled></td>
+                              <td><input type="checkbox" *ngIf='b.venueType === "hotel"' checked disabled></td>
+                              <td><input type="checkbox" *ngIf='b.venueType === "restaurants"' checked disabled></td>
+                              <td>{{b.date}}</td>
+                          </tr>
                         </tbody>
                       </table>
                 </div>

@@ -9,7 +9,8 @@ import { ShareServiceService } from '../services/share-service.service';
 })
 export class MyBookingComponent implements OnInit {
 
-  
+  booking:any
+
   constructor(private service:BookingService) { }
 
   ngOnInit(): void {
@@ -19,6 +20,7 @@ export class MyBookingComponent implements OnInit {
   getBooking(){
     this.service.getBooking(localStorage.getItem('user') || "{}")
     .subscribe(data=>{
+      this.booking = data;
       console.log(data)
     })
     

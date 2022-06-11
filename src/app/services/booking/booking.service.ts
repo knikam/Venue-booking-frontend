@@ -24,6 +24,6 @@ export class BookingService {
     .set('Authorization', 'Bearer '+localStorage.getItem("token"))
     .set('Content-Type', 'application/json')
 
-    return this.http.get(this.BASE_URL+"/getBooking?user="+user,{headers});
+    return this.http.post(this.BASE_URL+"/getBooking?user=",user,{headers});
   }
 }

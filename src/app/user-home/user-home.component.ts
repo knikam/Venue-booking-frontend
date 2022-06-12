@@ -10,30 +10,12 @@ import { VenueService } from '../services/venue/venue.service';
 })
 export class UserHomeComponent implements OnInit {
 
-  venues:any;
-  isUser:boolean;
-
   constructor(private service:VenueService, private shareService : ShareServiceService, private router:Router) { }
 
   ngOnInit(): void {
-    if(localStorage.getItem("role") == "User"){
-      this.isUser = true;
-    }
-    this.getVenues()
 
   }
 
-  getVenues(){
-    this.service.getVenues()
-    .subscribe(data=>{
-      console.log(data)
-      this.venues = data
-    })
-  }
-
-  book(venue:any){
-    this.shareService.sharingValue = venue;
-    this.router.navigate(['venue-booking']);
-  }
+  
 
 }

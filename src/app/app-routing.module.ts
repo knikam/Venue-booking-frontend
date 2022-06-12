@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddVenueComponent } from './add-venue/add-venue.component';
+import { AvailableVenueComponent } from './available-venue/available-venue.component';
 import { CustomerInfoComponent } from './customer-info/customer-info.component';
 import { MyBookingComponent } from './my-booking/my-booking.component';
 import { PaymentComponent } from './payment/payment.component';
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path:'my-booking', component:MyBookingComponent},
   {path:'customer-info', component:CustomerInfoComponent},
   {path:'payment', component:PaymentComponent},
+  {path:'available-venue', component:AvailableVenueComponent},
 
   { path: '',   redirectTo: '/user-login', pathMatch: 'full' },
 ];

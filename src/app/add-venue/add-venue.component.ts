@@ -11,7 +11,11 @@ import { VenueService } from '../services/venue/venue.service';
 export class AddVenueComponent implements OnInit {
 
   venueForm:FormGroup
-
+  isHall:boolean
+  isAuditorium:boolean
+  isHotel :boolean
+  isRes : boolean
+  
   constructor(private router:Router, private service:VenueService) { }
 
   ngOnInit(): void {

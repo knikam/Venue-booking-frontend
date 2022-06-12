@@ -8,9 +8,14 @@ import { Router } from '@angular/router';
 })
 export class PaymentComponent implements OnInit {
 
+  isCard:boolean
+  
   constructor(private router:Router) { }
 
   ngOnInit(): void {
+    if(localStorage.getItem('type') == "card"){
+      this.isCard = true
+    }
   }
 
   complete(){

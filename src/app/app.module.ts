@@ -13,6 +13,7 @@ import { MyBookingComponent } from './my-booking/my-booking.component';
 import { CustomerInfoComponent } from './customer-info/customer-info.component'
 import { HttpClientModule } from '@angular/common/http';
 import { PaymentComponent } from './payment/payment.component';
+import { AvailableVenueComponent } from './available-venue/available-venue.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PaymentComponent } from './payment/payment.component';
     VenueBookingComponent,
     MyBookingComponent,
     CustomerInfoComponent,
-    PaymentComponent
+    PaymentComponent,
+    AvailableVenueComponent
   ],
   imports: [
     BrowserModule,

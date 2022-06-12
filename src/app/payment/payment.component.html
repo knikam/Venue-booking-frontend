@@ -1,5 +1,5 @@
 <div class="container-fluid">
-	<div class="row d-flex justify-content-center">
+	<div class="row d-flex justify-content-center" *ngIf="isCard">
 		<div class="col-sm-12">
 			<div class="card mx-auto">
 				<p class="heading">PAYMENT DETAILS</p>
@@ -24,12 +24,24 @@
                         			<input type="password" name="cvv" placeholder="&#9679;&#9679;&#9679;" size="1" minlength="3" maxlength="3">
                         		</div>
                         		<div class="col-sm-5 pt-0">
-                        			<button type="button" class="btn btn-primary" (click)="complete()"><i class="fas fa-arrow-right px-3 py-2"></i></button>
+                        			<button type="button" class="btn btn-primary" (click)="complete()">Done</button>
                         		</div>
                         	</div>
                         </div>		
 					</form>
 			</div>
+		</div>
+	</div>
+	<div class="row " *ngIf="!isCard">
+        <div class="col-8">
+          <div class="text-center my-5 p-5">
+            <img src="https://cdn.ttgtmedia.com/rms/misc/qr_code_barcode.jpg">
+          </div>    
+        </div>
+    </div>
+	<div class="row text-center" *ngIf="!isCard">
+		<div class="col-10">
+			<button class="btn btn-info py-2 px-5" (click)="complete()">Done</button>
 		</div>
 	</div>
 </div>

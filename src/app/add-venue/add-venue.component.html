@@ -1,40 +1,247 @@
 <app-header></app-header>
 <div class="container">
-  <div class="row align-items-center h-75 vh-100">
-    <div class="col-lg-6 px-lg-4 ">
-    <div class="card">
-      <div class="card-body p-lg-5">
-        <h3 class="mb-4">Add Venue for customers</h3>
-        <form [formGroup]="venueForm">
-
+  <div class="row my-5 py-5">
+    <div class="col-lg-6 px-lg-4">
+      <div class="card">
+        <div class="card-body p-lg-5">
+          <h3 class="mb-4">Add Venue for customers</h3>
+          <form [formGroup]="venueForm">
             <div class="form-check mb-3">
-                <input class="form-check-input" formControlName="hall" type="checkbox" name="agree">
-                <label class="form-check-label"  for="agree">Hall</label>
+              <input
+                class="form-check-input"
+                formControlName="hall"
+                type="checkbox"
+                name="agree"
+                [(ngModel)]="isHall"
+              />
+              <label class="form-check-label" for="agree">Hall</label>
             </div>
 
             <div class="form-check mb-3">
-                <input class="form-check-input" formControlName="auditorium" type="checkbox" name="agree">
-                <label class="form-check-label"  for="agree">Auditorium</label>
+              <input
+                class="form-check-input"
+                formControlName="auditorium"
+                type="checkbox"
+                name="agree"
+                [(ngModel)]="isAuditorium"
+              />
+              <label class="form-check-label" for="agree">Auditorium</label>
             </div>
 
             <div class="form-check mb-3">
-                <input class="form-check-input" formControlName="hotel" type="checkbox" name="agree" >
-                <label class="form-check-label"  for="agree">Hotel</label>
+              <input
+                class="form-check-input"
+                formControlName="hotel"
+                type="checkbox"
+                name="agree"
+                [(ngModel)]="isHotel"
+              />
+              <label class="form-check-label" for="agree">Hotel</label>
             </div>
 
             <div class="form-check mb-3">
-                <input class="form-check-input" formControlName="restaurants" type="checkbox" name="agree">
-                <label class="form-check-label"  for="agree">Restaurants</label>
+              <input
+                class="form-check-input"
+                formControlName="restaurants"
+                type="checkbox"
+                name="agree"
+                [(ngModel)]="isRes"
+              />
+              <label class="form-check-label" for="agree">Restaurants</label>
             </div>
 
-          <div class="form-group">
-            <button class="btn btn-primary block" id="regidter" type="button" name="registerSubmit" (click)="addVanue()">Add Venue</button>
-          </div>
-
-        </form>
+            <div class="form-group">
+              <button
+                class="btn btn-primary block"
+                id="regidter"
+                type="button"
+                name="registerSubmit"
+                (click)="addVanue()"
+              >
+                Add Venue
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
+    <div class="col-lg-6" >
+      <div *ngIf="isHall">
+        <h4>Hall</h4>
+      <div class="accordian">
+        <ul>
+        <li>
+          <div class="image_title">
+          </div> 
+          <a href="#">
+            <img src="https://media.istockphoto.com/photos/empty-modern-hospital-corridor-picture-id1294129593?b=1&k=20&m=1294129593&s=170667a&w=0&h=ec9llv8HzmWqJQNyzNXyU7JqWgVzTctlEVOX8MQsV94=" width="100%"/>
+          </a>
+        </li>
+        <li>
+          <div class="image_title">
+          </div>
+          <a href="#">
+            <img src="https://media.weddingz.in/images/60e50efdb10fc3b9c3aadd282ac9f21a/parish-hall-elgin-kolkata-1.jpg" width="100%"/>
+          </a>
+        </li>
+        <li>
+          <div class="image_title">
+          </div>
+          <a href="#">
+            <img src="https://thumbs.dreamstime.com/b/conference-hall-7641763.jpg" width="100%"/>
+          </a>
+        </li>
+        <li>
+          <div class="image_title">
+          </div>
+          <a href="#">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1QYT6dOyRnNQzcpo6N1BQx86lFVXxHbcTnA&usqp=CAU" width="100%"/>
+          </a>
+        </li>
+      </ul>
+    </div>
+      </div>
+    <div *ngIf="isAuditorium">
+      <h4>Auditorium</h4>
+      <div class="accordian">
+        <ul>
+        <li>
+          <div class="image_title">
+            <a href="#">KungFu Panda</a>
+          </div> 
+          <a href="#">
+            <img src="http://thecodeplayer.com/uploads/media/3yiC6Yq.jpg"/>
+          </a>
+        </li>
+        <li>
+          <div class="image_title">
+            <a href="#">Toy Story 2</a>
+          </div>
+          <a href="#">
+            <img src="http://thecodeplayer.com/uploads/media/40Ly3VB.jpg"/>
+          </a>
+        </li>
+        <li>
+          <div class="image_title">
+            <a href="#">Wall-E</a>
+          </div>
+          <a href="#">
+            <img src="http://thecodeplayer.com/uploads/media/00kih8g.jpg"/>
+          </a>
+        </li>
+        <li>
+          <div class="image_title">
+            <a href="#">Up</a>
+          </div>
+          <a href="#">
+            <img src="http://thecodeplayer.com/uploads/media/2rT2vdx.jpg"/>
+          </a>
+        </li>
+        <li>
+          <div class="image_title">
+            <a href="#">Cars 2</a>
+          </div>
+          <a href="#">
+            <img src="http://thecodeplayer.com/uploads/media/8k3N3EL.jpg"/>
+          </a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div *ngIf="isHotel">
+      <h4>Hotel</h4>
+      <div class="accordian">
+        <ul>
+        <li>
+          <div class="image_title">
+            <a href="#">KungFu Panda</a>
+          </div> 
+          <a href="#">
+            <img src="http://thecodeplayer.com/uploads/media/3yiC6Yq.jpg"/>
+          </a>
+        </li>
+        <li>
+          <div class="image_title">
+            <a href="#">Toy Story 2</a>
+          </div>
+          <a href="#">
+            <img src="http://thecodeplayer.com/uploads/media/40Ly3VB.jpg"/>
+          </a>
+        </li>
+        <li>
+          <div class="image_title">
+            <a href="#">Wall-E</a>
+          </div>
+          <a href="#">
+            <img src="http://thecodeplayer.com/uploads/media/00kih8g.jpg"/>
+          </a>
+        </li>
+        <li>
+          <div class="image_title">
+            <a href="#">Up</a>
+          </div>
+          <a href="#">
+            <img src="http://thecodeplayer.com/uploads/media/2rT2vdx.jpg"/>
+          </a>
+        </li>
+        <li>
+          <div class="image_title">
+            <a href="#">Cars 2</a>
+          </div>
+          <a href="#">
+            <img src="http://thecodeplayer.com/uploads/media/8k3N3EL.jpg"/>
+          </a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div *ngIf="isRes">
+      <h4>Auditorium</h4>
+      <div class="accordian">
+        <ul>
+        <li>
+          <div class="image_title">
+            <a href="#">KungFu Panda</a>
+          </div> 
+          <a href="#">
+            <img src="http://thecodeplayer.com/uploads/media/3yiC6Yq.jpg"/>
+          </a>
+        </li>
+        <li>
+          <div class="image_title">
+            <a href="#">Toy Story 2</a>
+          </div>
+          <a href="#">
+            <img src="http://thecodeplayer.com/uploads/media/40Ly3VB.jpg"/>
+          </a>
+        </li>
+        <li>
+          <div class="image_title">
+            <a href="#">Wall-E</a>
+          </div>
+          <a href="#">
+            <img src="http://thecodeplayer.com/uploads/media/00kih8g.jpg"/>
+          </a>
+        </li>
+        <li>
+          <div class="image_title">
+            <a href="#">Up</a>
+          </div>
+          <a href="#">
+            <img src="http://thecodeplayer.com/uploads/media/2rT2vdx.jpg"/>
+          </a>
+        </li>
+        <li>
+          <div class="image_title">
+            <a href="#">Cars 2</a>
+          </div>
+          <a href="#">
+            <img src="http://thecodeplayer.com/uploads/media/8k3N3EL.jpg"/>
+          </a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    </div>
   </div>
-
-</div>
 </div>

@@ -42,12 +42,15 @@ export class VenueBookingComponent implements OnInit {
       if(data){
         if(data){
           this.router.navigate(['payment'])
+          localStorage.setItem("type",this.venueForm.get('payment')?.value)
         }else{
           alert("Service not available")
         }
       }else{
         alert("Failed to venue")
       }
+    },error=>{
+      alert(this.venueForm.get('venueType')?.value+" is already booked for "+this.venueForm.get('date')?.value)
     })
   }
 

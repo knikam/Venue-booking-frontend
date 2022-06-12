@@ -23,7 +23,7 @@
 
                 <div class="form-floating mb-3">
                   <select class="form-control py-2" formControlName="userType">
-                    <option selected disabled hidden>User type</option>
+                    <option selected disabled hidden [ngValue]="null">Role</option>
                     <option value="User">User</option>
                     <option value="Dealer">Dealer</option>
                   </select>
@@ -72,7 +72,7 @@
 
                 <div class="form-floating mb-3">
                   <select class="form-control py-2" formControlName="gender">
-                    <option option value="" selected disabled hidden>Gender</option>
+                    <option [ngValue]="null" selected disabled hidden>Gender</option>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
                   </select>
@@ -80,7 +80,7 @@
 
                  <div class="form-floating mb-3">
                   <select class="form-control py-2" formControlName="userType">
-                    <option selected disabled hidden>User type</option>
+                    <option [ngValue]="null" selected disabled hidden>Role</option>
                     <option value="User">User</option>
                     <option value="Dealer">Dealer</option>
                   </select>

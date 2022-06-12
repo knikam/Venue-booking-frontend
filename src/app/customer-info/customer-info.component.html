@@ -1,2 +1,54 @@
 <app-header></app-header>
+<div class="container-fluid">
+  <div class="col-lg-8 my-5 py-5">
+    <div class="card mb-4">
+        <h3 class="p-4">Your Infomation</h3>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-sm-3">
+            <p class="mb-0">Name</p>
+          </div>
+          <div class="col-sm-9">
+            <p class="text-muted mb-0">{{user.name}}</p>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-sm-3">
+            <p class="mb-0">Username</p>
+          </div>
+          <div class="col-sm-9">
+            <p class="text-muted mb-0">{{user.loginId}}</p>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-sm-3">
+            <p class="mb-0">Email</p>
+          </div>
+          <div class="col-sm-9">
+            <p class="text-muted mb-0">{{user.email}}</p>
+          </div>
+        </div>
+        <hr>
+        <div class="row" *ngIf="role">
+          <div class="col-sm-3">
+            <p class="mb-0">Date of Birth</p>
+          </div>
+          <div class="col-sm-9">
+            <p class="text-muted mb-0">{{user.dateOfBirth}}</p>
+          </div>
+        </div>
+        <hr *ngIf=>
+        <div class="row" *ngIf="role">
+          <div class="col-sm-3">
+            <p class="mb-0">Gender</p>
+          </div>
+          <div class="col-sm-9">
+            <p class="text-muted mb-0">{{user.gender}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
 

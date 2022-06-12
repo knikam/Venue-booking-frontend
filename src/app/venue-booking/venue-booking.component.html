@@ -13,11 +13,20 @@
     
               <div class="form-floating mb-3">
                 <select class="form-control py-2" formControlName="venueType">
-                  <option option value="" selected disabled hidden>Venue Type</option>
+                  <option [ngValue]="null" selected disabled hidden>Venue Type</option>
                   <option value="hall">Hall</option>
                   <option value="auditorium">Auditorium</option>
                   <option value="hotel">Hotel</option>
                   <option value="restaurants">Restaurants</option>
+                </select>
+               </div>
+
+               <div class="form-floating mb-3">
+                <select class="form-control py-2" formControlName="payment">
+                  <option [ngValue]="null" selected disabled hidden>Payment Type</option>
+                  <option value="hall">Card</option>
+                  <option value="auditorium">UPI</option>
+                  <option value="hotel">NetBacking</option>
                 </select>
                </div>
     

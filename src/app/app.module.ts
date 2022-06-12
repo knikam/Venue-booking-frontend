@@ -12,6 +12,7 @@ import { VenueBookingComponent } from './venue-booking/venue-booking.component';
 import { MyBookingComponent } from './my-booking/my-booking.component';
 import { CustomerInfoComponent } from './customer-info/customer-info.component'
 import { HttpClientModule } from '@angular/common/http';
+import { PaymentComponent } from './payment/payment.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     AddVenueComponent,
     VenueBookingComponent,
     MyBookingComponent,
-    CustomerInfoComponent
+    CustomerInfoComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule,

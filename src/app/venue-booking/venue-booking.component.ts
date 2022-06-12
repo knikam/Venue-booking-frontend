@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { BookingService } from '../services/booking/booking.service';
 import { ShareServiceService } from '../services/share-service.service';
 
@@ -13,7 +14,7 @@ export class VenueBookingComponent implements OnInit {
   venueForm : FormGroup
   venue:any
   
-  constructor(private shareService:ShareServiceService, private service:BookingService) { }
+  constructor(private shareService:ShareServiceService, private service:BookingService, private router:Router) { }
 
   ngOnInit(): void {
     this.venue = this.shareService.sharingValue;
@@ -21,6 +22,7 @@ export class VenueBookingComponent implements OnInit {
     this.venueForm = new FormGroup({
       date : new FormControl,
       venueType : new FormControl,
+      payment : new FormControl
     })
   }
 
@@ -38,7 +40,11 @@ export class VenueBookingComponent implements OnInit {
     let res = this.service.addBooking(booking)
     res.subscribe(data=>{
       if(data){
-        alert("Your venue is booked.")
+        if(data){
+          this.router.navigate(['payment'])
+        }else{
+          alert("Service not available")
+        }
       }else{
         alert("Failed to venue")
       }

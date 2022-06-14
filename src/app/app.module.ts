@@ -14,6 +14,7 @@ import { CustomerInfoComponent } from './customer-info/customer-info.component'
 import { HttpClientModule } from '@angular/common/http';
 import { PaymentComponent } from './payment/payment.component';
 import { AvailableVenueComponent } from './available-venue/available-venue.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { AvailableVenueComponent } from './available-venue/available-venue.compo
     MyBookingComponent,
     CustomerInfoComponent,
     PaymentComponent,
-    AvailableVenueComponent
+    AvailableVenueComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule,

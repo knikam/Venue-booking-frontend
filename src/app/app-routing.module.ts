@@ -8,6 +8,7 @@ import { PaymentComponent } from './payment/payment.component';
 import { UserHomeComponent } from './user-home/user-home.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { VenueBookingComponent } from './venue-booking/venue-booking.component';
+import {ContactUsComponent} from './contact-us/contact-us.component'
 
 const routes: Routes = [
   {path:'user-login',component:UserLoginComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path:'customer-info', component:CustomerInfoComponent},
   {path:'payment', component:PaymentComponent},
   {path:'available-venue', component:AvailableVenueComponent},
+  {path:'contact-us', component:ContactUsComponent},
 
   { path: '',   redirectTo: '/user-login', pathMatch: 'full' },
 ];

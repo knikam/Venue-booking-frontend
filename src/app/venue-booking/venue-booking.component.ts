@@ -50,7 +50,10 @@ export class VenueBookingComponent implements OnInit {
         alert("Failed to venue")
       }
     },error=>{
-      alert(this.venueForm.get('venueType')?.value+" is already booked for "+this.venueForm.get('date')?.value)
+      if(error.status == 409){
+        alert(this.venueForm.get('venueType')?.value+" is already booked for "+this.venueForm.get('date')?.value)
+      }
+      
     })
   }
 
